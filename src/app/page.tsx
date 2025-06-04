@@ -104,15 +104,15 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-                <div className="text-gray-600">Katılımcı</div>
+                <div className="text-gray-600">{t.home.stats.participants}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
-                <div className="text-gray-600">Şirket</div>
+                <div className="text-gray-600">{t.home.stats.companies}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">20+</div>
-                <div className="text-gray-600">Kulüp</div>
+                <div className="text-gray-600">{t.home.stats.clubs}</div>
               </div>
             </div>
           </div>
@@ -123,10 +123,10 @@ export default function Home() {
       <section className="bg-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Geleceği Birlikte Şekillendirelim!
+            {t.home.cta.title}
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            TOFA'ya katılın ve teknoloji dünyasındaki yerinizi alın.
+            {t.home.cta.description}
           </p>
           <Link
             href="/register"
