@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "TOFA - Kayseri Technology Summit",
-  description: "Kayseri's biggest technology event bringing together technology enthusiasts, students, professionals and companies.",
+  description: "Kayseri's biggest technology event bringing together technology enthusiasts, students, professionals and sponsors.",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased font-sans`}
+        className={`${inter.variable} ${jetbrainsMono.variable} antialiased font-sans text-white relative`}
       >
         <LanguageProvider>
           <div className="min-h-screen flex flex-col">

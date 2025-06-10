@@ -3,7 +3,6 @@ export const tr = {
   nav: {
     home: 'Ana Sayfa',
     clubs: 'Kulüpler',
-    companies: 'Şirketler',
     sponsors: 'Sponsorlar',
     events: 'Etkinlikler',
     register: 'Kayıt Ol',
@@ -13,39 +12,33 @@ export const tr = {
   home: {
     title: 'TOFA',
     subtitle: 'Kayseri Teknoloji Zirvesi',
-    description: 'Teknoloji, inovasyon ve geleceğin bir araya geldiği zirvede biz de varız!',
-    heroText: 'Kayseri\'nin en büyük teknoloji etkinliği',
+    description: 'Teknoloji, inovasyon ve geleceğin buluştuğu zirvede bizde varız!',
+    heroText: 'Kayserinin en büyük teknoloji etkinliği',
     aboutTitle: 'TOFA Hakkında',
-    aboutText: 'TOFA (Kayseri Teknoloji Zirvesi), teknoloji meraklıları, öğrenciler, profesyoneller ve şirketleri bir araya getiren Kayseri\'nin en büyük teknoloji etkinliğidir.',
+    aboutText: 'TOFA (Kayseri Teknoloji Zirvesi), teknoloji meraklılarını, öğrencileri, profesyonelleri ve şirketleri bir araya getiren Kayserinin en büyük teknoloji etkinliğidir.',
     joinButton: 'Bize Katıl',
-    learnMoreButton: 'Daha Fazla Öğren',
+    learnMoreButton: 'Daha Fazla Bilgi',
     stats: {
       participants: 'Katılımcı',
-      companies: 'Şirket',
-      clubs: 'Kulüp'
+      clubs: 'Kulüp',
+      sponsors: 'Sponsor'
     },
     cta: {
       title: 'Geleceği Birlikte Şekillendirelim!',
-      description: 'TOFA\'ya katılın ve teknoloji dünyasındaki yerinizi alın.'
+      description: 'TOFAya katılın ve teknoloji dünyasında yerinizi alın.'
     }
   },
   // Clubs Page
   clubs: {
     title: 'Kulüpler',
-    subtitle: 'TOFA\'ya katılan öğrenci kulüpleri',
-    description: 'Kayseri\'deki üniversitelerin teknoloji odaklı kulüpleri TOFA\'da bir araya geliyor.'
-  },
-  // Companies Page
-  companies: {
-    title: 'Şirketler',
-    subtitle: 'TOFA\'ya destek veren teknoloji şirketleri',
-    description: 'Yerel ve ulusal teknoloji şirketleri deneyimlerini TOFA\'da paylaşıyor.'
+    subtitle: 'TOFAya katılan öğrenci kulüpleri',
+    description: 'Kayserideki üniversitelerin teknoloji odaklı kulüpleri TOFAda buluşuyor.'
   },
   // Sponsors Page
   sponsors: {
     title: 'Sponsorlar',
-    subtitle: 'TOFA\'nın değerli sponsorları',
-    description: 'Etkinliğimizi destekleyen ve teknolojinin gelişimine katkı sağlayan sponsorlarımız.'
+    subtitle: 'TOFAnın değerli sponsorları',
+    description: 'Etkinliğimize destek veren ve teknolojinin gelişimine katkı sağlayan sponsorlarımız.'
   },
   // Events Page
   events: {
@@ -56,7 +49,7 @@ export const tr = {
   // Register Page
   register: {
     title: 'Kayıt Ol',
-    subtitle: 'TOFA\'ya katılmak için kayıt olun',
+    subtitle: 'TOFAya katılmak için kayıt olun',
     nameLabel: 'Ad Soyad',
     emailLabel: 'E-posta',
     phoneLabel: 'Telefon',

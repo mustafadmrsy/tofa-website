@@ -13,26 +13,26 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>('tr');
-  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    // Load from localStorage on mount
-    const savedLanguage = localStorage.getItem('language') as Language;
-    if (savedLanguage && (savedLanguage === 'tr' || savedLanguage === 'en')) {
-      setLanguage(savedLanguage);
+    try {
+      const savedLanguage = localStorage.getItem('language') as Language;
+      if (savedLanguage && (savedLanguage === 'tr' || savedLanguage === 'en')) {
+        setLanguage(savedLanguage);
+      }
+    } catch (error) {
+      console.error('Failed to load language from localStorage:', error);
     }
-    setIsInitialized(true);
   }, []);
 
   const changeLanguage = (newLanguage: Language) => {
     setLanguage(newLanguage);
-    localStorage.setItem('language', newLanguage);
+    try {
+      localStorage.setItem('language', newLanguage);
+    } catch (error) {
+      console.error('Failed to save language to localStorage:', error);
+    }
   };
-
-  // Don't render children until language is loaded from localStorage
-  if (!isInitialized) {
-    return React.createElement('div', null, 'Loading...');
-  }
 
   return React.createElement(
     LanguageContext.Provider,

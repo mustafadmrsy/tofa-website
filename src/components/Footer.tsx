@@ -1,78 +1,64 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
-import { useTranslations } from '../hooks/useTranslations';
 
 export const Footer = () => {
-  const { t } = useTranslations();
-
-  const quickLinks = [
-    { key: 'home', href: '/' },
-    { key: 'clubs', href: '/clubs' },
-    { key: 'companies', href: '/companies' },
-    { key: 'sponsors', href: '/sponsors' },
-    { key: 'events', href: '/events' },
-  ];
-
-  const socialLinks = [
-    { name: 'Twitter', href: '#', icon: '🐦' },
-    { name: 'Instagram', href: '#', icon: '📷' },
-    { name: 'LinkedIn', href: '#', icon: '💼' },
-    { name: 'YouTube', href: '#', icon: '📺' },
-  ];
-
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo and Description */}
-          <div className="col-span-1 md:col-span-2">
-            <div className="text-2xl font-bold text-blue-400 mb-4">TOFA</div>
-            <p className="text-gray-300 mb-4 max-w-md">
-              {t.footer.description}
-            </p>
+    <footer className="w-full bg-transparent">
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12">
+          {/* Sol Kısım - Biz Kimiz? */}
+          <div className="w-full md:w-1/4">
+            <h2 className="text-3xl font-bold text-white">
+              Biz
+              <br />
+              Kimiz ?
+            </h2>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t.footer.quickLinks}</h3>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.key}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
-                  >
-                    {t.nav[link.key as keyof typeof t.nav]}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Orta Kısım - Açıklama */}
+          <div className="w-full md:w-2/4 text-base text-white/80 leading-relaxed tracking-wide font-light mb-6 text-center">
+            TOFA, Türkiye'nin önde gelen üniversitelerinin öğrencileri tarafından kurulan dinamik bir topluluktur. Teknoloji ve inovasyon alanında gençleri bir araya getirerek, onların potansiyellerini en üst düzeye çıkarmayı hedefler.
           </div>
 
-          {/* Social Media */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t.footer.followUs}</h3>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="text-2xl hover:text-blue-400 transition-colors"
-                  title={social.name}
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
+          {/* Sağ Kısım - İletişim */}
+          <div className="w-full md:w-1/4 md:text-right">
+            <h2 className="text-xl font-medium text-white mb-6">İLETİŞİM</h2>
+            <nav className="flex flex-col space-y-3 items-start md:items-end">
+              <Link 
+                href="https://facebook.com" 
+                target="_blank"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Facebook
+              </Link>
+              <Link 
+                href="https://instagram.com" 
+                target="_blank"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Instagram
+              </Link>
+              <Link 
+                href="https://twitter.com" 
+                target="_blank"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Twitter
+              </Link>
+              <Link 
+                href="mailto:contact@tofa.com"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Email
+              </Link>
+            </nav>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2025 TOFA - Kayseri Technology Summit. All rights reserved.
-          </p>
+        {/* Alt Kısım - Copyright */}
+        <div className="mt-8 pt-4 border-b-2 border-white/30">
+          <p className="text-gray-500 text-right pb-4">TOFA 2025</p>
         </div>
       </div>
     </footer>

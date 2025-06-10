@@ -2,25 +2,25 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { ClubCard } from '@/components/ClubCard';
+import { AcademyCard } from '@/components/AcademyCard';
 import { PageLayout } from '@/components/PageLayout';
 
-interface Club {
+interface Academy {
   id: number;
   name: string;
   imageUrl: string;
 }
 
-const clubs: Club[] = [
-  { id: 1, name: 'Kulüp Adı', imageUrl: '/assets/clubs/club-gradient.png' },
-  { id: 2, name: 'Kulüp Adı', imageUrl: '/assets/clubs/club-gradient.png' },
-  { id: 3, name: 'Kulüp Adı', imageUrl: '/assets/clubs/club-gradient.png' },
-  { id: 4, name: 'Kulüp Adı', imageUrl: '/assets/clubs/club-gradient.png' },
-  { id: 5, name: 'Kulüp Adı', imageUrl: '/assets/clubs/club-gradient.png' },
-  { id: 6, name: 'Kulüp Adı', imageUrl: '/assets/clubs/club-gradient.png' },
+const academies: Academy[] = [
+  { id: 1, name: 'Akademi Adı', imageUrl: '/assets/clubs/club-gradient.png' },
+  { id: 2, name: 'Akademi Adı', imageUrl: '/assets/clubs/club-gradient.png' },
+  { id: 3, name: 'Akademi Adı', imageUrl: '/assets/clubs/club-gradient.png' },
+  { id: 4, name: 'Akademi Adı', imageUrl: '/assets/clubs/club-gradient.png' },
+  { id: 5, name: 'Akademi Adı', imageUrl: '/assets/clubs/club-gradient.png' },
+  { id: 6, name: 'Akademi Adı', imageUrl: '/assets/clubs/club-gradient.png' },
 ];
 
-export default function ClubsPage() {
+export default function AcademyPage() {
   return (
     <PageLayout>
       <div className="container mx-auto px-4 py-16">
@@ -29,25 +29,25 @@ export default function ClubsPage() {
           <h1 className="text-5xl font-bold leading-tight">
             Bizi Destekleyen
             <br />
-            Kulüplerimiz
+            Akademi ve Okullar
           </h1>
           <div className="relative w-96 h-96">
             <Image
               src="/images/illustrations/undraw_connecting-teams_nnjy 1.svg"
-              alt="Clubs illustration"
+              alt="Academy illustration"
               fill
               className="object-contain"
             />
           </div>
         </div>
 
-        {/* Clubs Grid */}
+        {/* Academy Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
-          {clubs.map((club) => (
-            <ClubCard
-              key={club.id}
-              name={club.name}
-              imageUrl={club.imageUrl}
+          {academies.map((academy) => (
+            <AcademyCard
+              key={academy.id}
+              name={academy.name}
+              imageUrl={academy.imageUrl}
             />
           ))}
         </div>

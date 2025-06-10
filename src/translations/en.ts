@@ -3,7 +3,6 @@ export const en = {
   nav: {
     home: 'Home',
     clubs: 'Clubs',
-    companies: 'Companies',
     sponsors: 'Sponsors',
     events: 'Events',
     register: 'Register',
@@ -16,13 +15,13 @@ export const en = {
     description: 'We are here at the summit where technology, innovation and the future come together!',
     heroText: 'Kayseri\'s biggest technology event',
     aboutTitle: 'About TOFA',
-    aboutText: 'TOFA (Kayseri Technology Summit) is Kayseri\'s largest technology event that brings together technology enthusiasts, students, professionals and companies.',
+    aboutText: 'TOFA (Kayseri Technology Summit) is Kayseri\'s largest technology event that brings together technology enthusiasts, students, professionals and sponsors.',
     joinButton: 'Join Us',
     learnMoreButton: 'Learn More',
     stats: {
       participants: 'Participants',
-      companies: 'Companies',
-      clubs: 'Clubs'
+      clubs: 'Clubs',
+      sponsors: 'Sponsors'
     },
     cta: {
       title: 'Let\'s Shape the Future Together!',
@@ -34,12 +33,6 @@ export const en = {
     title: 'Clubs',
     subtitle: 'Student clubs participating in TOFA',
     description: 'Technology-focused clubs from universities in Kayseri come together at TOFA.'
-  },
-  // Companies Page
-  companies: {
-    title: 'Companies',
-    subtitle: 'Technology companies supporting TOFA',
-    description: 'Local and national technology companies share their experiences at TOFA.'
   },
   // Sponsors Page
   sponsors: {
